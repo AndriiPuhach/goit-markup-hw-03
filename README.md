@@ -1,3 +1,3 @@
-# goit-markup-hw-02
-Homework 2
-https://www.figma.com/file/oTYBECAN79dXy19hzWObO4/Web-Studio-(Version-2.1)?node-id=0%3A1
+# goit-markup-hw-03
+Homework 3
+https://www.figma.com/file/oTYBECAN79dXy19hzWObO4/Web-Studio-(Version-2.1)?node-id=1%3A94
