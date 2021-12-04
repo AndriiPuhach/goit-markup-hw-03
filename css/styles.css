@@ -18,6 +18,38 @@ body {
   color: var(--primary-text-color);
   font-family: Roboto, sans-serif;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.header {
+  border: 1px solid #ececec;
+}
+.header-content {
+  display: flex;
+  align-items: center;
+}
+
+.header-navigation {
+  display: flex;
+  align-items: center;
+}
+
 /* Лого Хедер и первая часть для Футера */
 .logo {
   font-family: Raleway, sans-serif;
@@ -27,6 +59,7 @@ body {
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+  display: inline-block;
 }
 
 .logo-studio {
@@ -43,6 +76,7 @@ body {
 }
 
 /* Хедер */
+
 .site-nav-link {
   font-weight: 500;
   font-size: 14px;
@@ -50,7 +84,22 @@ body {
   letter-spacing: 0.02em;
   color: var(--secondary-text-color);
   text-decoration: none;
+  display: block;
+  padding: 20px 0px;
+  margin: -20px 0px;
 }
+.site-nav-item {
+  padding: 32px 0px;
+}
+
+.site-nav-item:not(:last-child),
+.contacts-item:not(:last-child) {
+  margin-right: 50px;
+}
+.contacts-list {
+  margin-left: auto;
+}
+
 .site-nav-link:hover,
 .site-nav-link:focus {
   color: var(--accent-color);
@@ -61,12 +110,15 @@ body {
 }
 
 .contacts-link {
+  display: inline-block;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
   text-decoration: none;
+  padding: 20px 0px;
+  margin: -20px 0px;
 }
 
 .contacts-link:hover,
@@ -76,14 +128,20 @@ body {
 
 .contacts-list {
   list-style: none;
+  display: flex;
 }
 .site-nav-list {
   list-style: none;
+  display: flex;
+  margin-left: 93px;
 }
 
 /* Оформление героя */
 .hero {
   background-color: var(--secondary-bg-color);
+  text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 .hero-title {
@@ -94,14 +152,10 @@ body {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  margin-bottom: 30px;
 }
 
-/* Основные параметры кнопок */
-/* .button {
-  font-family: inherit;
-  cursor: pointer;
-}
-Кнопка герой */
+/*Кнопка герой */
 .hero-button {
   font-family: inherit;
   cursor: pointer;
@@ -115,19 +169,27 @@ body {
   background-color: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  min-width: 200px;
+  display: inline-block;
+  border-color: transparent;
 }
+
 /* Особенности */
 .properties-headline {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
-  text-align: center;
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
 }
 
 .properties-list {
   list-style: none;
+  display: flex;
+}
+
+.properties-item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .properties-title {
@@ -137,13 +199,34 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--secondary-text-color);
+  padding-bottom: 10px;
+  width: 270px;
+}
+
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0px 15px;
+}
+
+.properties-list {
+  margin-right: 30px;
 }
 .properties-text {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+  width: 270px;
 }
 
+.hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
 /* Чем мы занимаемся */
 .works-headline {
   font-weight: 700;
@@ -152,14 +235,21 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
+  margin-bottom: 50px;
 }
-
+.section.doing {
+  padding-top: 0px;
+}
 .works-list {
   list-style: none;
+  display: flex;
+}
+.works-item:not(:last-child) {
+  margin-right: 30px;
 }
 
 /* Команда */
-.section-team {
+.section.team {
   background-color: #f5f4fa;
 }
 
@@ -170,9 +260,11 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
+  margin-bottom: 50px;
 }
 .team-list {
   list-style: none;
+  display: flex;
 }
 
 .team-item-title {
@@ -181,17 +273,36 @@ body {
   line-height: 1.18;
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
+  text-align: center;
 }
 .team-item-text {
   font-size: 16px;
   line-height: 1.18;
   letter-spacing: 0.03em;
+  text-align: center;
+  padding-top: 10px;
+}
+.team-item-container {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
+.team-item {
+  background-color: var(--primary-bg-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  width: 270px;
+}
+
+.team-item:not(:last-child) {
+  margin-right: 30px;
+}
 /* Футер */
 
 .footer {
   background-color: var(--secondary-bg-color);
+  padding: 60px 0px;
 }
 /* Лого футер */
 .logo > .logo-studio-footer {
@@ -200,6 +311,7 @@ body {
 /* Адресс Футер */
 .adress-footer {
   font-style: normal;
+  margin-top: 20px;
 }
 
 .adress {
@@ -227,6 +339,10 @@ body {
 .adress-street {
   color: var(--primary-bg-color);
 }
+
+.adress-item:not(:last-child) {
+  margin-bottom: 9px;
+}
 /* Мейн портфолио */
 
 .hero-tagline {
@@ -242,8 +358,11 @@ body {
 /* Оформление кнопок портфолио */
 .filter-list {
   list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0px;
 }
-.filter-button-current {
+.filter-button.current {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
@@ -267,6 +386,14 @@ body {
   color: var(--secondary-text-color);
   font-family: inherit;
   cursor: pointer;
+  margin-bottom: 50px;
+  padding: 6px 22px;
+  border: transparent;
+  border-radius: 4px;
+}
+
+.filter-item:not(:last-child):not(:last-child) {
+  margin-right: 8px;
 }
 
 .filter-button:hover,
@@ -299,4 +426,28 @@ body {
 }
 .examples-list {
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -30px;
+  margin-bottom: -30px;
+  flex-basis: calc((100% - 60px) / 3);
+}
+
+.examples-item {
+  border-bottom: 1px solid #eeeeee;
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.examples-text {
+  padding-left: 24px;
+  padding-right: 24px;
+  margin-top: 20px;
+  margin-bottom: 4px;
+}
+
+.examples-description {
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 20px;
 }
